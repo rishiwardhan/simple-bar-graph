@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FIRST PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <!--chart start-->
+    <div class="chart">
+      <ul class="numbers">
+        <li><span>100%</span></li>
+        <li><span>50%</span></li>
+        <li><span>0%</span></li>
+       </ul>
+
+
+       <ul class="bars">
+        <li><div class="bar" data-percentage="92"></div><span>MATHS</span></li>
+        <li><div class="bar" data-percentage="72"></div><span>SCIENCE</span></li>
+        <li><div class="bar" data-percentage="65"></div><span>HINDI</span></li>
+        <li><div class="bar" data-percentage="95"></div><span>COMPUTER SCIENCE</span></li>
+        <li><div class="bar" data-percentage="89"></div><span>ENGLISH</span></li>
+      </ul>
+    </div>
+    <!--chart end-->
+
+    <script type="text/javascript">
+    $(function(){
+      $('.bars li .bar').each(function(key, bar){
+        var percentage = $(this).data('percentage');
+        $(this).animate({
+          'height' : percentage + '%'
+        },1000);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      
